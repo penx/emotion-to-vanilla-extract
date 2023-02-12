@@ -1,0 +1,53 @@
+name: Bug Report
+description: File a bug report
+title: "[Bug]: "
+labels: ["bug", "triage"]
+assignees:
+  - octocat
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to file an issue!
+        
+        If you have a bug or feature request, please specify the expected input and output in the form of a failing Jest test.
+  - type: textarea
+    id: failing-test
+    attributes:
+      label: Input
+      description: The input to the function
+      placeholder: |
+        ```ts
+        expect(
+          JSON.stringify(
+            emotionToVanillaExtract({
+              borderTop: "none",
+              border: "1px solid red",
+              borderLeft: "none",
+            }),
+            undefined,
+            2
+          )
+        ).toMatchInlineSnapshot(`
+          "{
+            "borderTop": "none",
+            "border": "1px solid red",
+            "borderLeft": "none",
+          }"
+        `);
+        ```
+    validations:
+      required: true
+  - type: textarea
+    id: info
+    attributes:
+      label: Any other info?
+  - type: dropdown
+    id: contribute
+    attributes:
+      label: Would you like to send a PR?
+      options:
+        - Yes
+        - No
+    validations:
+      required: true
