@@ -1,6 +1,45 @@
-import emotionToVanillaExtract from ".";
+import emotionToVanillaExtract from "./index";
 
 describe("emotion-to-vanilla-extract", () => {
+  it("Readme example", async () => {
+    expect(
+      emotionToVanillaExtract({
+        borderRight: "none",
+        borderTop: "none",
+        border: "1px solid red",
+        borderLeft: "none",
+        borderBottom: "none",
+        "&:hover": {
+          border: "2px solid red",
+          "&:not(:active)": {
+            border: "2px solid aquamarine",
+            "[data-mode='dark'] &": {
+              border: "2px solid white",
+            },
+          },
+        },
+      })
+    ).toMatchInlineSnapshot(`
+      {
+        "borderRight": "none",
+        "borderTop": "none",
+        "border": "1px solid red",
+        "borderLeft": "none",
+        "borderBottom": "none",
+        "selectors": {
+          "&:hover": {
+            "border": "2px solid red",
+          },
+          "&:not(:active):hover": {
+            "border": "2px solid aquamarine",
+          },
+          "[data-mode='dark'] &:not(:active):hover": {
+            "border": "2px solid white",
+          },
+        },
+      }
+    `);
+  });
   it("Parses a single style rule", async () => {
     expect(
       emotionToVanillaExtract({
