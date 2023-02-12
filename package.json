@@ -1,4 +1,26 @@
 {
   "name": "emotion-to-vanilla-extract",
-  "packageManager": "yarn@3.3.1"
+  "packageManager": "yarn@3.3.1",
+  "description": "Convert an Emotion CSSObject to a vanilla-extract ComplexStyleRule",
+  "version": "0.1.0",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/penx/emotion-to-vanilla-extract.git"
+  },
+  "author": "Alasdair McLeay",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/penx/emotion-to-vanilla-extract/issues"
+  },
+  "homepage": "https://github.com/penx/emotion-to-vanilla-extract#readme",
+  "keywords": [
+    "emotion",
+    "vanilla-extract",
+    "css-in-js"
+  ]
 }
