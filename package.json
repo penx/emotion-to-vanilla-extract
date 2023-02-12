@@ -3,6 +3,7 @@
   "packageManager": "yarn@3.3.1",
   "description": "Convert an Emotion CSSObject to a vanilla-extract ComplexStyleRule",
   "version": "0.1.0",
+  "module": "index.js",
   "main": "index.js",
   "devDependencies": {
     "@emotion/serialize": "^1.1.1",
@@ -24,7 +25,9 @@
   "scripts": {
     "test": "yarn lint && yarn jest",
     "jest": "jest --verbose --coverage",
-    "lint": "eslint '**/*.ts'"
+    "lint": "eslint '**/*.ts'",
+    "build": "yarn run build:ecm",
+    "build:ecm": "tsc -p tsconfig.prod.json"
   },
   "repository": {
     "type": "git",
