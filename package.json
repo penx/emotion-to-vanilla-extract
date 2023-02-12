@@ -2,7 +2,7 @@
   "name": "emotion-to-vanilla-extract",
   "packageManager": "yarn@3.3.1",
   "description": "Convert an Emotion CSSObject to a vanilla-extract ComplexStyleRule",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "module": "index.js",
   "main": "index.js",
   "types": "index.d.ts",
