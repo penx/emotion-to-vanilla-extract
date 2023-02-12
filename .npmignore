@@ -1,1 +1,10 @@
 !/*.d.ts
+
+.yarn
+.github
+.editorconfig
+.eslintrc
+.nvmrc
+.yarnrc.yml
+package.tgz
+/coverage
