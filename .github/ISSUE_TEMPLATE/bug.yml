@@ -26,8 +26,8 @@ body:
   - type: textarea
     id: failing-test
     attributes:
-      label: Input
-      description: The input to the function
+      label: Failing test
+      description: What is the desired input and output you would like, that is not currently working or supported.
       value: |
         ```ts failing test
         expect(
