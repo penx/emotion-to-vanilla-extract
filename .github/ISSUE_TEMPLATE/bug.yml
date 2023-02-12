@@ -1,6 +1,6 @@
-name: Bug Report
-description: File a bug report
-title: "[Bug]: "
+name: Bug Report or Feature Request
+description: File a bug report or request a new feature.
+title: "[Bug?]: "
 labels: ["bug", "triage"]
 assignees:
   - octocat
@@ -10,29 +10,33 @@ body:
       value: |
         Thanks for taking the time to file an issue!
         
-        If you have a bug or feature request, please specify the expected input and output in the form of a failing Jest test.
+        If you have a bug or feature request, please specify the expected input and output in the form of a failing Jest test:
+
+
+        ```ts failing test
+        expect(
+          emotionToVanillaExtract({
+            border: "1px solid red",
+          }),
+        ).toMatchInlineSnapshot(`
+          "{
+            "border": "1px solid red",
+          }"
+        `);
   - type: textarea
     id: failing-test
     attributes:
       label: Input
       description: The input to the function
-      placeholder: |
-        ```ts
+      value: |
+        ```ts failing test
         expect(
-          JSON.stringify(
-            emotionToVanillaExtract({
-              borderTop: "none",
-              border: "1px solid red",
-              borderLeft: "none",
-            }),
-            undefined,
-            2
-          )
+          emotionToVanillaExtract({
+            border: "1px solid red",
+          }),
         ).toMatchInlineSnapshot(`
           "{
-            "borderTop": "none",
             "border": "1px solid red",
-            "borderLeft": "none",
           }"
         `);
         ```
@@ -42,12 +46,3 @@ body:
     id: info
     attributes:
       label: Any other info?
-  - type: dropdown
-    id: contribute
-    attributes:
-      label: Would you like to send a PR?
-      options:
-        - "Yes"
-        - "No"
-    validations:
-      required: true
