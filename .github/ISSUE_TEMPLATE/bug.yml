@@ -47,7 +47,7 @@ body:
     attributes:
       label: Would you like to send a PR?
       options:
-        - Yes
-        - No
+        - "Yes"
+        - "No"
     validations:
       required: true
