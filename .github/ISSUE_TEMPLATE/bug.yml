@@ -10,7 +10,7 @@ body:
       value: |
         Thanks for taking the time to file an issue!
         
-        If you have a bug or feature request, please specify the expected input and output in the form of a failing Jest test:
+        If you have a bug or feature request, please specify the expected input and output in the form of a minimal failing Jest test:
 
 
         ```ts failing test
@@ -27,7 +27,7 @@ body:
     id: failing-test
     attributes:
       label: Failing test
-      description: What is the desired input and output you would like, that is not currently working or supported.
+      description: What is the input and output you would like, that is not working or supported. Please keep the example as minimal as possible.
       value: |
         ```ts failing test
         expect(
