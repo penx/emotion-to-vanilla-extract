@@ -21,3 +21,4 @@ node_modules
 
 /*.js
 /*.d.ts
+/package.tgz
